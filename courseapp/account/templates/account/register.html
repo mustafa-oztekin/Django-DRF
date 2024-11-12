@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+    Giriş
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-12">
+                <h1>Register New User</h1>
+                <hr>
+
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    {% include "partials/_form.html" %}
+                    <button type="submit" class="btn btn-primary">Register New User</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
